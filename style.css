@@ -1,0 +1,152 @@
+:root{
+    --accent: #EA918D;
+    --accentHover:#DE8A86;
+    --dark:#304659;
+    --dark80:rgba(48,70,89,.8);
+    --dark60:rgba(48,70,89,.6);
+    --light:#F5F9FC;
+    --transition:all 0.3s ease 0s;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+html, body {
+   
+    height: 100%;
+    overflow: auto;
+}
+body{
+    background: linear-gradient(var(--dark60), var(--dark80)), url(/img/benjamin-voros-phIFdC6lA4E-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p, a, button{
+    font-family: sans-serif;
+    color: var(--light);
+    text-decoration: none;
+}
+a, button,.logo{
+    cursor: pointer;
+}
+main{
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(60px, 1fr) repeat(6, minmax(50px, 190px)) minmax(60px,1fr);
+}
+header{
+    grid-column: 2 / span 6;
+}
+nav{
+    display: flex;
+    align-items: center;
+    height: 120px;
+}
+.links{
+    margin-left: auto;
+}
+.links a, .links dugme{
+    font-size: 1.0625rem;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.links a{
+    margin-right: 50px;
+}
+.links a:hover{
+    color: var(--accent);
+}
+
+.dugme{
+    border: none;
+    background-color: var(--accent);
+    padding: 8px 25px;
+    transition: var(--transition);
+}
+
+.dugme:hover{
+    background-color: var(--accentHover);
+}
+
+.info{
+    grid-column: 2 / span 4;
+}
+.naslov{
+    color: var(--light);
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 4.375rem;
+}
+.ikone{
+    display: flex;
+    margin-top: 55px;
+}
+.ikona1{
+    display: flex;
+    align-items: center;
+}
+.ikona2{
+    display: flex;
+    align-items: center;
+}
+.ikona3{
+    display: flex;
+    align-items: center;
+}
+.ikonainfo{
+    margin: 0 80px 0 20px;
+}
+
+.ikonatop{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 5px;
+}
+.ikonabot{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.features{
+   grid-column: 2 / span 7;
+   background-color: var(--dark80);
+   align-self: end;
+   padding: 40px 0 0 60px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+}
+.feature{
+    display: flex;
+    margin: 0 60px 40px 0;
+}
+.feature:nth-child(3){
+    align-self: flex-start;
+}
+.feature img{
+    height: 100px;
+    margin-right: 20px;
+}
+.feature tekst{
+    margin-top: 10px;
+}
+
+.feature .btn{
+cursor: pointer;
+color: var(--light);
+background-color: var(--accent);
+padding: 8px 25px;
+transition: var(--transition);
+}
+.btn:hover{
+    background-color: var(--accentHover);
+}
